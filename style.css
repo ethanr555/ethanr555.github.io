@@ -12,6 +12,37 @@
 	vertical-align: center;
 }
 
+.project_list_info
+{
+	padding-top: 1em;
+	padding-bottom: 1em;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+
+}
+
+.project_list_info_text text
+{
+	padding-left: 1em;
+	padding-right: 1em;
+	display: inline;
+	width: 50%;
+	font-size: 1.5em;
+	text-align: center;
+	
+}
+
+.project_list_info_arrow text
+{
+
+	display: inline;
+	width: 10%;
+	font-size: 1.5em;
+	text-align: center;
+
+
+}
 
 .picture {
 	margin-left: auto;
