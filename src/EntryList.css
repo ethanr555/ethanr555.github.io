@@ -1,0 +1,13 @@
+.entrylist {
+    overflow-y:scroll;
+    overflow-x:clip;
+    box-sizing: border-box;
+    height: 90vh;
+}
+
+.entry-div {
+    width: 80%;
+    color: black;
+    border: solid;
+    border-width:thin;
+}

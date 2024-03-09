@@ -1,0 +1,31 @@
+.sidebyside_left {
+    float: left;
+    display: inline-flex;
+    text-align: left;
+    width: 30%;
+    height: 100vh;
+    background-color: #3d3d3d;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    box-sizing: border-box;
+}
+
+.sidebyside_right {
+    float: right;
+    text-align: right;
+    width: 70%;
+    height: 100vh;
+    background-color: #363636;
+    padding-left: 0%;
+    padding-right: 0%;
+    box-sizing: border-box;
+}
+
+.infoside {
+    display: block;
+    text-align:center;
+    float: none;
+    width: 100%;
+}
+

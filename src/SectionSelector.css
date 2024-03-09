@@ -1,0 +1,36 @@
+
+.sectionSelector {
+
+    border-radius: 0px;
+    display: flex-inline;
+    height: 10vw;
+    max-height: 10vh;
+    width: 33.3%;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0px;
+    font-size: min(3vw, 30px);
+    font-family:Arial;
+    font-weight:bold;
+    background-color: #000000;
+    border-color: #FFFFFF;
+    border-top: none;
+    border-bottom: none;
+    border-left:solid;
+    border-right: solid;
+}
+
+.sectionSelector:disabled {
+    background-color: white;
+    color: black;
+    border-color: #FFFFFF;
+}
+
+.sectionSelector:enabled:hover {
+    background-color: gray;
+    cursor:pointer;
+}
+
+.sectionSelector:disabled:hover {
+
+}

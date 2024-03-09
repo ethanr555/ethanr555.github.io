@@ -1,0 +1,78 @@
+.gallerybackground {
+    width:100%;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.galleryforeground {
+    position: relative;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: rgb(69, 69, 69, 1);
+}
+
+.galleryforeground_internal {
+    position: static;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    flex-direction:column;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.galleryimage {
+    max-width: 40vh;
+    max-height: 22.5vh;
+    padding: 5vh;
+}
+
+.gallerytd {
+    width: 80vh;
+    height: 40vh;
+}
+
+.galleryiframediv {
+    position: relative;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 40vh;
+    height: 22.5vh;
+    padding: 5vh;
+}
+
+.galleryiframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+.galleryexit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+
+}
+
+.galleryexit_button {
+    background-color: rgba(0,0,0,0);
+    font-weight: bold;
+    font-size: 4vh;
+    border:none;
+    padding-right: 12px;
+    font-family: sans-serif;
+}
+
+.galleryexit_button:hover {
+    cursor:pointer;
+}
