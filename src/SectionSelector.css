@@ -1,36 +1,32 @@
 
 .sectionSelector {
-
     border-radius: 0px;
     display: flex-inline;
     height: 10vw;
     max-height: 10vh;
     width: 33.3%;
     box-sizing: border-box;
-    position: sticky;
-    top: 0px;
     font-size: min(3vw, 30px);
-    font-family:Arial;
-    font-weight:bold;
-    background-color: #000000;
-    border-color: #FFFFFF;
-    border-top: none;
-    border-bottom: none;
-    border-left:solid;
-    border-right: solid;
+    font-family: Arial;
+    font-weight: bold;
+    background-color: #525252;
+    border-color: #e3e3e3;
+    border: none;
+}
+
+.sectionSelector_div {
+    position: sticky;
+    display: block;
+    top: 0;
 }
 
 .sectionSelector:disabled {
-    background-color: white;
+    background-color: #e3e3e3;
     color: black;
-    border-color: #FFFFFF;
+    border-color: #e3e3e3;
 }
 
 .sectionSelector:enabled:hover {
     background-color: gray;
     cursor:pointer;
-}
-
-.sectionSelector:disabled:hover {
-
 }

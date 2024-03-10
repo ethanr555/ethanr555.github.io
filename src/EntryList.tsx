@@ -1,6 +1,6 @@
 import { ProjectEntry, CareerEntry, EducationEntry } from "./Entry";
 import { useContext } from 'react';
-import { PortfolioContext } from './PortfolioContext'
+import { PortfolioContext, PortfolioContextType } from './PortfolioContext'
 import './EntryList.css';
 import { EntryMode } from "./EnumDefintion";
 
@@ -11,13 +11,13 @@ interface EntryListInter
 
 export default function EntryList({ currentMode }: EntryListInter)
 {
-    const portfolio = useContext(PortfolioContext);
+    const portfolio: Partial<PortfolioContextType> = useContext < Partial <PortfolioContextType>>(PortfolioContext);
     let amount = [];
     switch (currentMode)
     {
         case EntryMode.Project:
             {
-                if (portfolio)
+                if (portfolio && portfolio.Projects)
                 {
                     for (let i = 0; i < portfolio.Projects.length; i++)
                     {
@@ -40,13 +40,12 @@ export default function EntryList({ currentMode }: EntryListInter)
                             />);
                         if (i + 1 < portfolio.Projects.length) amount.push(<hr className="entry-div" />);
                     }  
-                }
-   
+                }  
             }
             break;
         case EntryMode.Career:
             {
-                if (portfolio)
+                if (portfolio && portfolio.Career)
                 {
                     for (let i = 0; i < portfolio.Career.length; i++)
                     {
@@ -59,14 +58,13 @@ export default function EntryList({ currentMode }: EntryListInter)
                                 companyLink={portfolio.Career[i].Link}
                             />);
                         if (i + 1 < portfolio.Career.length) amount.push(<hr className="entry-div" />);
-                    }
-                }
-                
+                    }                 
+                }              
             }
             break;
         case EntryMode.Education:
             {
-                if (portfolio)
+                if (portfolio && portfolio.Education)
                 {
                     for (let i = 0; i < portfolio.Education.length; i++)
                     {

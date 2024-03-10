@@ -8,7 +8,6 @@
     line-height: 0.5;
 }
 
-
 .title {
     display: block;
     width: 100%;
@@ -50,4 +49,24 @@
 }
 .centercolumn p {
         text-align: center;
+}
+
+@media (orientation: portrait) {
+    .entry_imgdesc {
+        line-height: 1;
+    }
+
+    .leftcolumn {
+        width: 100%;
+    }
+
+    .rightcolumn {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .img_projectEntry {
+        max-width: 90vw;
+        max-height: unset;
+    }
 }

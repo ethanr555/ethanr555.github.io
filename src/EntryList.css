@@ -1,8 +1,6 @@
 .entrylist {
-    overflow-y:scroll;
-    overflow-x:clip;
     box-sizing: border-box;
-    height: 90vh;
+    min-height: 90vh;
 }
 
 .entry-div {
@@ -10,4 +8,12 @@
     color: black;
     border: solid;
     border-width:thin;
+}
+
+@media (orientation: portrait) {
+    .entrylist {
+        overflow-y: initial;
+        overflow-x: initial;
+        height: auto;
+    }
 }

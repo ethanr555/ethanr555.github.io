@@ -34,18 +34,20 @@ export function ProjectEntry({ name = "", date = "", company = "", company_link 
 
     function handleGalleryVisible()
     {
+        document.body.style.overflow = "hidden";
         setGalleryVisible(true);
     }
 
     return (
         <>
+            {galleryVisible && <Gallery videos={videos} images={images} onExit={setGalleryVisible} />}
+
             <div className='entry'>
                 {name && <h2 className='title'>{name}</h2>}
                 <div className='leftcolumn'>
                     <div className='leftcolumn_internal'>
                         {thumbnail && videos && images && <p className='entry_imgdesc'>↓  Click image below to see gallery ↓</p> }
                         {thumbnail && videos && images && <img className='img_projectEntry' src={thumbnail} onClick={handleGalleryVisible} />}
-                        {galleryVisible && <Gallery videos={videos} images={images} onExit={setGalleryVisible} />}
                         {date && <p>Date: {date}</p>}
                         {code_repo_link && <p>Code Repo: <a href={code_repo_link}>{code_repo}</a></p>}
                         {company && <p>Company: <a href={company_link}>{company}</a></p>}
@@ -66,7 +68,7 @@ export function ProjectEntry({ name = "", date = "", company = "", company_link 
 interface CareerEntryProps
 {
     title: string;
-    descriptionItems: [];
+    descriptionItems: string[];
     companyName: string;
     date: string;
     companyLink: string;

@@ -49,10 +49,10 @@ export default function SectionSelector({ mode, onModeChange }: SectionSelectorI
     }
 
     return (
-        <div className='bar'>
+        <div className="sectionSelector_div">
             <button className="sectionSelector" disabled={ projectEnabled} onClick={ handleProjectClick}>Projects</button>
             <button className="sectionSelector" disabled={ careerEnabled} onClick={ handleCareerClick}>Career</button>
-            <button className="sectionSelector" disabled={ educationEnabled} onClick={ handleEducationClick}>Education</button>
+            <button className="sectionSelector" disabled={educationEnabled} onClick={handleEducationClick}>Education</button>
         </div>
     );
 }
