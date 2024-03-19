@@ -1,27 +1,29 @@
 .App {
-    align-self: flex-start;
     flex-direction: row;
     display: flex;
+
 }
 
 .sidebyside_left {
     text-align: left;
     width: 30%;
     min-height: 100vh;
-    background-color: #c4c4c4;
+    background-color: #fafafa;
     padding-left: 1%;
     padding-right: 1%;
     padding-top: 1%;
     box-sizing: border-box;
     color: #000000;
     align-self: stretch;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
 }
 
 .sidebyside_right {
     text-align: right;
     width: 70%;
     min-height: 100vh;
-    background-color: #e3e3e3;
+    background-color: #ffffff;
     padding-left: 0%;
     padding-right: 0%;
     box-sizing: border-box;
@@ -40,21 +42,18 @@
 @media (orientation: portrait) {
     .App {
         display: block;
+        position: absolute;
     }
     
     .sidebyside_left {
         display: block;
-        float:none;
-        width: 100%;
-        min-height: unset;
+        width: 100%!important;
         padding-bottom: 30px;
     }
 
     .sidebyside_right {
         display: block;
-        float: none;
-        width: 100%;
-        height: unset;
+        width: 100%!important;
         overflow: visible;
     }
 }

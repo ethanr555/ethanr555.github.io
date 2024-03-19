@@ -4,14 +4,17 @@
     display: flex-inline;
     height: 10vw;
     max-height: 10vh;
-    width: 33.3%;
+    width: 33.33%;
     box-sizing: border-box;
     font-size: min(3vw, 30px);
     font-family: Arial;
     font-weight: bold;
     background-color: #525252;
-    border-color: #e3e3e3;
     border: none;
+    color: white;
+    position: relative;
+    top: 0;
+    z-index: 5;
 }
 
 .sectionSelector_div {
@@ -21,9 +24,9 @@
 }
 
 .sectionSelector:disabled {
-    background-color: #e3e3e3;
+    background-color: #ffffff;
     color: black;
-    border-color: #e3e3e3;
+    border-color: #ffffff;
 }
 
 .sectionSelector:enabled:hover {
