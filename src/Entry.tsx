@@ -1,6 +1,7 @@
 ﻿import { useState } from 'react';
 import './Entry.css'
 import Gallery from './Gallery';
+import grid from './assets/grid.svg';
 
 interface ProjectEntryProps
 {
@@ -17,9 +18,10 @@ interface ProjectEntryProps
     tools: string[];
     videos: string[];
     images: string[];
+    imageThumbnails: string[];
     thumbnail: string;
 }
-export function ProjectEntry({ name = "", date = "", company = "", company_link = "", code_repo = "Link", code_repo_link = "", project_name = "", project_link = "", description = "", team = "", tools = [], videos = [], images = [], thumbnail = "" }: ProjectEntryProps)
+export function ProjectEntry({ name = "", date = "", company = "", company_link = "", code_repo = "Link", code_repo_link = "", project_name = "", project_link = "", description = "", team = "", tools = [], videos = [], images = [], imageThumbnails = [], thumbnail = "" }: ProjectEntryProps)
 {
     const [galleryVisible, setGalleryVisible] = useState(false);
     let toolList = "";
@@ -40,14 +42,14 @@ export function ProjectEntry({ name = "", date = "", company = "", company_link 
 
     return (
         <>
-            {galleryVisible && <Gallery videos={videos} images={images} onExit={setGalleryVisible} />}
+            {galleryVisible && <Gallery videos={videos} images={images} imageThumbnails={imageThumbnails}  onExit={setGalleryVisible} />}
 
             <div className='entry'>
                 {name && <h2 className='title'>{name}</h2>}
                 <div className='leftcolumn'>
                     <div className='leftcolumn_internal'>
                         {thumbnail && videos && images && <p className='entry_imgdesc'>↓  Click image below to see gallery ↓</p> }
-                        {thumbnail && videos && images && <img className='img_projectEntry' src={thumbnail} onClick={handleGalleryVisible} />}
+                        {thumbnail && videos && images && <GalleryPreview thumbnailURL={thumbnail} onClick={handleGalleryVisible} />}
                         {date && <p>Date: {date}</p>}
                         {code_repo_link && <p>Code Repo: <a href={code_repo_link}>{code_repo}</a></p>}
                         {company && <p>Company: <a href={company_link}>{company}</a></p>}
@@ -110,6 +112,28 @@ export function EducationEntry({ degreeName, gpa, universityName, universityLink
                 {date && <p>Date: {date}</p>}
                 {universityName && <p>University/College: <a href={universityLink}>{universityName}</a></p>}
             </div>
+        </div>
+    );
+}
+
+interface GalleryPreviewInterface
+{
+    thumbnailURL: string;
+    onClick: React.Dispatch<boolean>;
+};
+function GalleryPreview({thumbnailURL, onClick }: GalleryPreviewInterface)
+{
+    function handleImageClick(e: React.MouseEvent)
+    {
+        e.stopPropagation();
+        onClick(true);
+
+    }
+
+    return (
+        <div className="gallerypreview_container">
+            <img className="gallerypreview_child_image" src={thumbnailURL} onClick={handleImageClick}></img>
+            <img className="gallerypreview_child_magnify" src={grid} onClick={handleImageClick}></img>
         </div>
     );
 }

@@ -1,7 +1,6 @@
 
 .sectionSelector {
     border-radius: 0px;
-    display: flex-inline;
     height: 10vw;
     max-height: 10vh;
     width: 33.33%;
@@ -12,15 +11,13 @@
     background-color: #525252;
     border: none;
     color: white;
-    position: relative;
-    top: 0;
-    z-index: 5;
-}
 
+}
 .sectionSelector_div {
     position: sticky;
     display: block;
     top: 0;
+    z-index: 12;
 }
 
 .sectionSelector:disabled {

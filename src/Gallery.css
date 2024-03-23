@@ -22,6 +22,23 @@
     z-index: 15;
 }
 
+.galleryforegroundimage {
+    position: unset;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    z-index: 15;
+    display: grid;
+    place-items: center;
+}
+
+.largeimage {
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
 .galleryforeground_internal {
     position: unset;
     width: 100%;
@@ -31,16 +48,56 @@
     overflow-x: scroll;
     overflow-y: clip;
     gap: 50px;
-    grid-template-rows: 40% 40%;
+    grid-template-rows: 50% 40%;
     justify-items: center;
     align-items: center;
     z-index: 15;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
-.galleryimage {
-    max-width: 40vh;
-    max-height: 22.5vh;
-    z-index: 15;
+.galleryimage_container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 40vh;
+    height: 22.5vh;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+}
+
+.galleryimage_container:hover {
+    cursor: pointer;
+}
+
+.galleryimage_container:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 16;
+}
+
+.galleryimage_child_image {
+    height: 100%;
+}
+
+.galleryimage_child_magnify {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 17;
+    opacity: 0;
+
+}
+
+.galleryimage_child_magnify:hover {
+    opacity: 100;
 }
 
 .galleryiframediv {
@@ -54,7 +111,6 @@
     height: 100%;
     z-index: 15;
 }
-
 
 .galleryexit {
     position: absolute;
@@ -77,16 +133,16 @@
     z-index: 15;
 }
 
-    .galleryexit_button:hover {
-        cursor: pointer;
-        background-color: rgba(128, 128, 128, 0.5);
-    }
+.galleryexit_button:hover {
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.5);
+}
 
 @media (orientation: portrait) {
     
     .galleryforeground {
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         top: 0;
         left: 0;
     }
@@ -110,4 +166,17 @@
     .galleryexit {
         right: 2vh;
     }
+
+    .largeimage {
+        width: 100%;
+        max-height: unset;
+        height: unset;
+
+    }
+
+    .galleryforeground_internal {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
 }

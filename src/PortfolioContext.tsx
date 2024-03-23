@@ -34,6 +34,7 @@ interface Portfolio_Projects
     Tools: string[];
     Videos: string[];
     Images: string[];
+    ImageThumbnails: string[];
     Thumbnail: string;
 }
 

@@ -36,6 +36,7 @@ export default function EntryList({ currentMode }: EntryListInter)
                                 tools={portfolio.Projects[i].Tools}
                                 videos={portfolio.Projects[i].Videos}
                                 images={portfolio.Projects[i].Images}
+                                imageThumbnails={portfolio.Projects[i].ImageThumbnails}
                                 thumbnail={portfolio.Projects[i].Thumbnail}
                             />);
                         if (i + 1 < portfolio.Projects.length) amount.push(<hr className="entry-div" />);

@@ -5,7 +5,6 @@
 }
 
 .sidebyside_left {
-    text-align: left;
     width: 30%;
     min-height: 100vh;
     background-color: #fafafa;
@@ -15,12 +14,11 @@
     box-sizing: border-box;
     color: #000000;
     align-self: stretch;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
-    z-index: 10;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+    z-index: 13;
 }
 
 .sidebyside_right {
-    text-align: right;
     width: 70%;
     min-height: 100vh;
     background-color: #ffffff;
@@ -49,6 +47,7 @@
         display: block;
         width: 100%!important;
         padding-bottom: 30px;
+        min-height: 0vh;
     }
 
     .sidebyside_right {
