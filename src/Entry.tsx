@@ -96,24 +96,25 @@ export function CareerEntry({ title, descriptionItems, companyName, date, compan
 
 interface EducationEntryInter
 {
-    degreeName: string,
-    gpa: number,
+    degreeTitle: string,
+    degreeMajor: string,
     universityName: string,
     universityLink: string,
     date: string
 }
-export function EducationEntry({ degreeName, gpa, universityName, universityLink, date }: EducationEntryInter)
+export function EducationEntry({ degreeTitle, degreeMajor, universityName, universityLink, date }: EducationEntryInter)
 {
     return (
         <div className='entry'>
-            {degreeName && <h2 className='title'>{degreeName}</h2>}
+            {degreeTitle && degreeMajor && <h2 className='title'>{degreeTitle + " in " + degreeMajor}</h2>}
             <div className='centercolumn'>
-                {gpa && <p>GPA: {gpa}</p>}
                 {date && <p>Date: {date}</p>}
                 {universityName && <p>University/College: <a href={universityLink}>{universityName}</a></p>}
             </div>
         </div>
     );
+
+    //                {gpa && <p>GPA: {gpa}</p>}
 }
 
 interface GalleryPreviewInterface

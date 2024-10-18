@@ -9,7 +9,7 @@ function App() {
     
     useEffect(() =>
     {
-        fetch("https://gist.githubusercontent.com/ethanr555/0faacb365944aed6d65f3a87db5d6197/raw/portfolio.json")
+        fetch("https://raw.githubusercontent.com/ethanr555/PortfolioData/refs/heads/main/portfolio.json")
             .then((response) => { let j: PortfolioContextType = response.json() as unknown as PortfolioContextType; return j; })
             .then((json) => setPortfolio(json));
     },[])

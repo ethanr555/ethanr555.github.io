@@ -69,15 +69,19 @@ export default function EntryList({ currentMode }: EntryListInter)
                 {
                     for (let i = 0; i < portfolio.Education.length; i++)
                     {
-                        amount.push(
-                            <EducationEntry
-                                degreeName={portfolio.Education[i].DegreeName}
-                                gpa={portfolio.Education[i].GPA}
-                                date={portfolio.Education[i].Date}
-                                universityName={portfolio.Education[i].UniversityName}
-                                universityLink={portfolio.Education[i].UniversityLink}
-                            />);
-                        if (i + 1 < portfolio.Education.length) amount.push(<hr className="entry-div" />);
+                        for (let j = 0; j < portfolio.Education[i].Degrees.length; j++)
+                        {
+                            amount.push(
+                                <EducationEntry
+                                    degreeTitle={portfolio.Education[i].Degrees[j].DegreeTitle}
+                                    degreeMajor={portfolio.Education[i].Degrees[j].DegreeMajor}
+                                    date={portfolio.Education[i].Degrees[j].Date}
+                                    universityName={portfolio.Education[i].UniversityName}
+                                    universityLink={portfolio.Education[i].UniversityLink}
+                                />);
+                            if (j + 1 < portfolio.Education[i].Degrees.length) amount.push(<hr className="entry-div" />);
+                        }
+                        if (i + 1 < portfolio.Education.length) amount.push(<hr className="entry-div" />);                       
                     }  
                 }
                    

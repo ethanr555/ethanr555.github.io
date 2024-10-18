@@ -47,11 +47,17 @@ interface Portfolio_Career
     Link: string;
 }
 
-interface Portfolio_Education
+interface Portfolio_Degree
 {
-    DegreeName: string;
-    GPA: number;
-    UniversityName: string;
-    UniversityLink: string;
+    DegreeTitle: string;
+    DegreeMajor: string;
     Date: string;
 }
+
+interface Portfolio_Education
+{
+    UniversityName: string;
+    UniversityLink: string;
+    Degrees: Portfolio_Degree[];
+}
+
