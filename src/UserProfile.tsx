@@ -24,7 +24,7 @@ export default function UserProfile()
                 {github && <li className="p">Github: <a href={github}>Link</a></li>}
             </ul>
             <div>
-                <a href="https://drive.google.com/uc?export=download&id=1-B19EYs-5lptBozmEtqijTUB9pq5VYkZ">
+                <a href="https://d2m6vacaxnz5yc.cloudfront.net/resume.pdf">
                     <button className='resumebutton'>
                         Download Resume
                     </button>
