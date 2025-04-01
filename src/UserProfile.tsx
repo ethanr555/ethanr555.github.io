@@ -9,7 +9,7 @@ export default function UserProfile()
     const description: string = portfolio && portfolio.Bio ? portfolio.Bio.Description: "";
     const phoneNumber: string = portfolio && portfolio.Bio ? portfolio.Bio.PhoneNumber: "";
     const email: string = portfolio && portfolio.Bio ? portfolio.Bio.Email: "";
-    const linkedIn: string = portfolio && portfolio.Bio ? portfolio.Bio.LinkedinLink : "";
+    const linkedIn: string = portfolio && portfolio.Bio ? portfolio.Bio.LinkedInLink : "";
     const github: string = portfolio && portfolio.Bio ? portfolio.Bio.GithubLink : "";
 
 

@@ -18,7 +18,7 @@ interface Portfolio_Bio
     LinkedIn: string;
     Github: string;
     GithubLink: string;
-    LinkedinLink: string;
+    LinkedInLink: string;
 }
 
 interface Portfolio_Projects
