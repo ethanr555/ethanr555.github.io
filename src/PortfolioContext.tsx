@@ -17,6 +17,8 @@ interface Portfolio_Bio
     PhoneNumber: string;
     LinkedIn: string;
     Github: string;
+    GithubLink: string;
+    LinkedinLink: string;
 }
 
 interface Portfolio_Projects
